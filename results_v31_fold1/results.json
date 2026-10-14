@@ -1,0 +1,163 @@
+{
+  "threshold": 0.5,
+  "threshold_selection": {
+    "threshold": 0.0434078782500551,
+    "feasible": true,
+    "view": "natural",
+    "objective": "macro_f1",
+    "target": 0.8,
+    "feasible_range": [
+      0.0434078782500551,
+      0.04434351592682015
+    ],
+    "accuracy": 0.9825986078886311,
+    "macro_precision": 0.8095031575743742,
+    "macro_recall": 0.8019447743467933,
+    "macro_f1": 0.8056742225278133
+  },
+  "test_ensemble": {
+    "threshold": 0.5,
+    "n_real": 100,
+    "n_fake": 4214,
+    "auc": 0.8916765543426675,
+    "ap_fake": 0.9955151186462032,
+    "ap_real": 0.5502560249612654,
+    "natural": {
+      "accuracy": 0.978442280945758,
+      "balanced_accuracy": 0.7546606549596583,
+      "macro_precision": 0.7623499874098213,
+      "macro_recall": 0.7546606549596583,
+      "macro_f1": 0.7584440308819218,
+      "precision_real": 0.5360824742268041,
+      "recall_real": 0.52,
+      "f1_real": 0.5279187817258884,
+      "precision_fake": 0.9886175005928385,
+      "recall_fake": 0.9893213099193165,
+      "f1_fake": 0.9889692800379551,
+      "tp": 4169.0,
+      "tn": 52.0,
+      "fp": 48.0,
+      "fn": 45.0
+    },
+    "class_balanced": {
+      "accuracy": 0.7546606549596583,
+      "balanced_accuracy": 0.7546606549596583,
+      "macro_precision": 0.8265979285704619,
+      "macro_recall": 0.7546606549596583,
+      "macro_f1": 0.7403636157088063,
+      "precision_real": 0.9798772962240864,
+      "recall_real": 0.52,
+      "f1_real": 0.6794371717196773,
+      "precision_fake": 0.6733185609168373,
+      "recall_fake": 0.9893213099193165,
+      "f1_fake": 0.8012900596979353,
+      "tp": 0.49466065495965816,
+      "tn": 0.26,
+      "fp": 0.24000000000000002,
+      "fn": 0.0053393450403417175
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "val_threshold_info": {
+        "threshold": 0.0434078782500551,
+        "feasible": true,
+        "view": "natural",
+        "objective": "macro_f1",
+        "target": 0.8,
+        "feasible_range": [
+          0.0434078782500551,
+          0.04434351592682015
+        ],
+        "accuracy": 0.9825986078886311,
+        "macro_precision": 0.8095031575743742,
+        "macro_recall": 0.8019447743467933,
+        "macro_f1": 0.8056742225278133
+      },
+      "test": {
+        "threshold": 0.0434078782500551,
+        "n_real": 100,
+        "n_fake": 4214,
+        "auc": 0.8916765543426675,
+        "ap_fake": 0.9955151186462032,
+        "ap_real": 0.5502560249612654,
+        "natural": {
+          "accuracy": 0.978442280945758,
+          "balanced_accuracy": 0.7546606549596583,
+          "macro_precision": 0.7623499874098213,
+          "macro_recall": 0.7546606549596583,
+          "macro_f1": 0.7584440308819218,
+          "precision_real": 0.5360824742268041,
+          "recall_real": 0.52,
+          "f1_real": 0.5279187817258884,
+          "precision_fake": 0.9886175005928385,
+          "recall_fake": 0.9893213099193165,
+          "f1_fake": 0.9889692800379551,
+          "tp": 4169.0,
+          "tn": 52.0,
+          "fp": 48.0,
+          "fn": 45.0
+        },
+        "class_balanced": {
+          "accuracy": 0.7546606549596583,
+          "balanced_accuracy": 0.7546606549596583,
+          "macro_precision": 0.8265979285704619,
+          "macro_recall": 0.7546606549596583,
+          "macro_f1": 0.7403636157088063,
+          "precision_real": 0.9798772962240864,
+          "recall_real": 0.52,
+          "f1_real": 0.6794371717196773,
+          "precision_fake": 0.6733185609168373,
+          "recall_fake": 0.9893213099193165,
+          "f1_fake": 0.8012900596979353,
+          "tp": 0.49466065495965816,
+          "tn": 0.26,
+          "fp": 0.24000000000000002,
+          "fn": 0.0053393450403417175
+        }
+      }
+    }
+  ],
+  "args": {
+    "mode": "train",
+    "dataset_path": "c:\\Users\\Anuradha\\Desktop\\FakeAVCeleb_v1.2",
+    "weights_path": "c:\\Users\\Anuradha\\Desktop\\Capstone Project 1992\\archive (16)\\resnet18-f37072fd.pth",
+    "cache_dir": "C:\\Users\\Anuradha\\Desktop\\Claude_AVFF_v3_full_dataset\\features_v3",
+    "out_dir": "results_v31_fold1",
+    "max_samples": 0,
+    "n_frames": 16,
+    "img_size": 224,
+    "face_crop": "auto",
+    "workers": 3,
+    "threads": 4,
+    "backbone_ckpt": "",
+    "audio_from": "",
+    "folds": "1",
+    "T": 8,
+    "n_folds": 5,
+    "test_frac": 0.2,
+    "epochs_s1": 30,
+    "s1_views": 4,
+    "epochs_s2": 40,
+    "epoch_frac": 0.5,
+    "patience": 10,
+    "batch_size": 64,
+    "lr": 0.0002,
+    "ema": 0.99,
+    "lr_s1": 0.0005,
+    "noise": 0.1,
+    "label_smoothing": 0.05,
+    "aux_weight": 0.5,
+    "shares": [
+      0.5,
+      0.1,
+      0.2,
+      0.2
+    ],
+    "target": 0.8,
+    "thr_objective": "macro_f1",
+    "thr_view": "natural",
+    "seed": 42
+  }
+}

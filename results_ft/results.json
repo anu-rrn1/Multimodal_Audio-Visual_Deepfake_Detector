@@ -1,0 +1,163 @@
+{
+  "threshold": 0.5,
+  "threshold_selection": {
+    "threshold": 0.3822015454138201,
+    "feasible": true,
+    "view": "natural",
+    "objective": "macro_f1",
+    "target": 0.8,
+    "feasible_range": [
+      0.027140903878787447,
+      0.9678686462145201
+    ],
+    "accuracy": 0.997969837587007,
+    "macro_precision": 0.9695823412520812,
+    "macro_recall": 0.9867577197149644,
+    "macro_f1": 0.9780077796477199
+  },
+  "test_ensemble": {
+    "threshold": 0.5,
+    "n_real": 100,
+    "n_fake": 4214,
+    "auc": 0.9990092548647367,
+    "ap_fake": 0.9999765684338374,
+    "ap_real": 0.9449224924196662,
+    "natural": {
+      "accuracy": 0.9958275382475661,
+      "balanced_accuracy": 0.9783388704318936,
+      "macro_precision": 0.9358878989706773,
+      "macro_recall": 0.9783388704318936,
+      "macro_f1": 0.9560737195804908,
+      "precision_real": 0.8727272727272727,
+      "recall_real": 0.96,
+      "f1_real": 0.9142857142857144,
+      "precision_fake": 0.9990485252140818,
+      "recall_fake": 0.9966777408637874,
+      "f1_fake": 0.9978617248752673,
+      "tp": 4200.0,
+      "tn": 96.0,
+      "fp": 4.0,
+      "fn": 14.0
+    },
+    "class_balanced": {
+      "accuracy": 0.9783388704318937,
+      "balanced_accuracy": 0.9783388704318936,
+      "macro_precision": 0.9789832258135707,
+      "macro_recall": 0.9783388704318936,
+      "macro_f1": 0.978331583036255,
+      "precision_real": 0.9965512484480618,
+      "recall_real": 0.96,
+      "f1_real": 0.9779342087450926,
+      "precision_fake": 0.9614152031790796,
+      "recall_fake": 0.9966777408637874,
+      "f1_fake": 0.9787289573274174,
+      "tp": 0.4983388704318936,
+      "tn": 0.4799999999999999,
+      "fp": 0.02,
+      "fn": 0.001661129568106312
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "val_threshold_info": {
+        "threshold": 0.3822015454138201,
+        "feasible": true,
+        "view": "natural",
+        "objective": "macro_f1",
+        "target": 0.8,
+        "feasible_range": [
+          0.027140903878787447,
+          0.9678686462145201
+        ],
+        "accuracy": 0.997969837587007,
+        "macro_precision": 0.9695823412520812,
+        "macro_recall": 0.9867577197149644,
+        "macro_f1": 0.9780077796477199
+      },
+      "test": {
+        "threshold": 0.3822015454138201,
+        "n_real": 100,
+        "n_fake": 4214,
+        "auc": 0.9990092548647367,
+        "ap_fake": 0.9999765684338374,
+        "ap_real": 0.9449224924196662,
+        "natural": {
+          "accuracy": 0.9958275382475661,
+          "balanced_accuracy": 0.9783388704318936,
+          "macro_precision": 0.9358878989706773,
+          "macro_recall": 0.9783388704318936,
+          "macro_f1": 0.9560737195804908,
+          "precision_real": 0.8727272727272727,
+          "recall_real": 0.96,
+          "f1_real": 0.9142857142857144,
+          "precision_fake": 0.9990485252140818,
+          "recall_fake": 0.9966777408637874,
+          "f1_fake": 0.9978617248752673,
+          "tp": 4200.0,
+          "tn": 96.0,
+          "fp": 4.0,
+          "fn": 14.0
+        },
+        "class_balanced": {
+          "accuracy": 0.9783388704318937,
+          "balanced_accuracy": 0.9783388704318936,
+          "macro_precision": 0.9789832258135707,
+          "macro_recall": 0.9783388704318936,
+          "macro_f1": 0.978331583036255,
+          "precision_real": 0.9965512484480618,
+          "recall_real": 0.96,
+          "f1_real": 0.9779342087450926,
+          "precision_fake": 0.9614152031790796,
+          "recall_fake": 0.9966777408637874,
+          "f1_fake": 0.9787289573274174,
+          "tp": 0.4983388704318936,
+          "tn": 0.4799999999999999,
+          "fp": 0.02,
+          "fn": 0.001661129568106312
+        }
+      }
+    }
+  ],
+  "args": {
+    "mode": "train",
+    "dataset_path": "c:\\Users\\Anuradha\\Desktop\\FakeAVCeleb_v1.2",
+    "weights_path": "c:\\Users\\Anuradha\\Desktop\\Capstone Project 1992\\archive (16)\\resnet18-f37072fd.pth",
+    "cache_dir": "features_ft",
+    "out_dir": "results_ft",
+    "max_samples": 0,
+    "n_frames": 16,
+    "img_size": 224,
+    "face_crop": "auto",
+    "workers": 3,
+    "threads": 4,
+    "backbone_ckpt": "backbone_ft\\resnet18_ft_fold1.pth",
+    "audio_from": "",
+    "folds": "1",
+    "T": 8,
+    "n_folds": 5,
+    "test_frac": 0.2,
+    "epochs_s1": 30,
+    "s1_views": 4,
+    "epochs_s2": 40,
+    "epoch_frac": 0.5,
+    "patience": 10,
+    "batch_size": 64,
+    "lr": 0.0002,
+    "ema": 0.99,
+    "lr_s1": 0.0005,
+    "noise": 0.1,
+    "label_smoothing": 0.05,
+    "aux_weight": 0.5,
+    "shares": [
+      0.5,
+      0.1,
+      0.2,
+      0.2
+    ],
+    "target": 0.8,
+    "thr_objective": "macro_f1",
+    "thr_view": "natural",
+    "seed": 42
+  }
+}

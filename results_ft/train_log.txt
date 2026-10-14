@@ -1,0 +1,90 @@
+==============================================================================
+AVFF v3 | 2026-10-11 01:20:33 | CPU threads=4
+Dataset: c:\Users\Anuradha\Desktop\FakeAVCeleb_v1.2
+Args: {"mode": "train", "dataset_path": "c:\\Users\\Anuradha\\Desktop\\FakeAVCeleb_v1.2", "weights_path": "c:\\Users\\Anuradha\\Desktop\\Capstone Project 1992\\archive (16)\\resnet18-f37072fd.pth", "cache_dir": "features_ft", "out_dir": "results_ft", "max_samples": 0, "n_frames": 16, "img_size": 224, "face_crop": "auto", "workers": 3, "threads": 4, "backbone_ckpt": "backbone_ft\\resnet18_ft_fold1.pth", "audio_from": "", "folds": "1", "T": 8, "n_folds": 5, "test_frac": 0.2, "epochs_s1": 30, "s1_views": 4, "epochs_s2": 40, "epoch_frac": 0.5, "patience": 10, "batch_size": 64, "lr": 0.0002, "ema": 0.99, "lr_s1": 0.0005, "noise": 0.1, "label_smoothing": 0.05, "aux_weight": 0.5, "shares": [0.5, 0.1, 0.2, 0.2], "target": 0.8, "thr_objective": "macro_f1", "thr_view": "natural", "seed": 42}
+Videos: 21544 | RVRA=500 RVFA=500 FVRA=9709 FVFA=10835 | real:fake = 1:42.1 | identities=500
+Identity-grouped split: dev=17230 (400 real) | test=4314 (100 real) | test identities never seen in training/validation/threshold tuning.
+  [Backbone] leakage check passed: none of its 320 training identities appear in validation or test.
+------------------------------------------------------------------------------
+FOLD 1/5 | train=13782 (320 real) | val=3448 (80 real)
+  Stage 1 (self-supervised, 320 real train videos only)
+    Stage1 ep 01/30 | loss=7.8569 A2V=4.7939 V2A=1.0686 NCE=3.9890
+    Stage1 ep 02/30 | loss=4.6281 A2V=2.3095 V2A=0.9350 NCE=2.7671
+    Stage1 ep 03/30 | loss=3.6276 A2V=2.0356 V2A=0.8738 NCE=1.4364
+    Stage1 ep 04/30 | loss=3.2241 A2V=2.0003 V2A=0.8404 NCE=0.7667
+    Stage1 ep 05/30 | loss=2.9517 A2V=1.8955 V2A=0.8217 NCE=0.4690
+    Stage1 ep 06/30 | loss=2.8882 A2V=1.9497 V2A=0.7946 NCE=0.2877
+    Stage1 ep 07/30 | loss=2.7883 A2V=1.9004 V2A=0.7613 NCE=0.2532
+    Stage1 ep 08/30 | loss=2.7244 A2V=1.8586 V2A=0.7631 NCE=0.2053
+    Stage1 ep 09/30 | loss=2.6493 A2V=1.8001 V2A=0.7459 NCE=0.2066
+    Stage1 ep 10/30 | loss=2.5843 A2V=1.7803 V2A=0.7209 NCE=0.1663
+    Stage1 ep 11/30 | loss=2.4811 A2V=1.6939 V2A=0.7122 NCE=0.1499
+    Stage1 ep 12/30 | loss=2.4583 A2V=1.6902 V2A=0.6914 NCE=0.1533
+    Stage1 ep 13/30 | loss=2.4315 A2V=1.6754 V2A=0.6853 NCE=0.1415
+    Stage1 ep 14/30 | loss=2.3653 A2V=1.6340 V2A=0.6584 NCE=0.1457
+    Stage1 ep 15/30 | loss=2.3368 A2V=1.5967 V2A=0.6632 NCE=0.1537
+    Stage1 ep 16/30 | loss=2.3130 A2V=1.5935 V2A=0.6529 NCE=0.1332
+    Stage1 ep 17/30 | loss=2.2749 A2V=1.5730 V2A=0.6362 NCE=0.1314
+    Stage1 ep 18/30 | loss=2.2298 A2V=1.5385 V2A=0.6340 NCE=0.1147
+    Stage1 ep 19/30 | loss=2.2369 A2V=1.5529 V2A=0.6267 NCE=0.1146
+    Stage1 ep 20/30 | loss=2.1901 A2V=1.5205 V2A=0.6104 NCE=0.1183
+    Stage1 ep 21/30 | loss=2.2131 A2V=1.5296 V2A=0.6190 NCE=0.1288
+    Stage1 ep 22/30 | loss=2.1874 A2V=1.5248 V2A=0.5962 NCE=0.1328
+    Stage1 ep 23/30 | loss=2.1669 A2V=1.5064 V2A=0.6027 NCE=0.1155
+    Stage1 ep 24/30 | loss=2.1526 A2V=1.4969 V2A=0.5981 NCE=0.1153
+    Stage1 ep 25/30 | loss=2.1453 A2V=1.4832 V2A=0.5975 NCE=0.1294
+    Stage1 ep 26/30 | loss=2.1071 A2V=1.4670 V2A=0.5919 NCE=0.0963
+    Stage1 ep 27/30 | loss=2.1320 A2V=1.4893 V2A=0.5850 NCE=0.1154
+    Stage1 ep 28/30 | loss=2.1294 A2V=1.4880 V2A=0.5877 NCE=0.1074
+    Stage1 ep 29/30 | loss=2.1381 A2V=1.4980 V2A=0.5886 NCE=0.1032
+    Stage1 ep 30/30 | loss=2.1525 A2V=1.5141 V2A=0.5793 NCE=0.1180
+  Stage 2 (supervised)
+    Stage2 ep 01/40 | loss=0.8156 | val AUC=0.9917 | OK thr=0.3210 Acc=0.993 P=0.938 R=0.911 F1=0.924
+    Stage2 ep 02/40 | loss=0.2374 | val AUC=0.9929 | OK thr=0.2997 Acc=0.996 P=0.951 R=0.968 F1=0.959
+    Stage2 ep 03/40 | loss=0.1653 | val AUC=0.9950 | OK thr=0.2850 Acc=0.997 P=0.957 R=0.968 F1=0.962
+    Stage2 ep 04/40 | loss=0.1515 | val AUC=0.9953 | OK thr=0.2717 Acc=0.997 P=0.957 R=0.968 F1=0.962
+    Stage2 ep 05/40 | loss=0.1494 | val AUC=0.9963 | OK thr=0.5000 Acc=0.997 P=0.952 R=0.974 F1=0.963
+    Stage2 ep 06/40 | loss=0.1366 | val AUC=0.9978 | OK thr=0.2532 Acc=0.997 P=0.963 R=0.974 F1=0.968
+    Stage2 ep 07/40 | loss=0.1312 | val AUC=0.9970 | OK thr=0.2103 Acc=0.997 P=0.963 R=0.974 F1=0.968
+    Stage2 ep 08/40 | loss=0.1378 | val AUC=0.9973 | OK thr=0.2219 Acc=0.997 P=0.963 R=0.974 F1=0.968
+    Stage2 ep 09/40 | loss=0.1345 | val AUC=0.9984 | OK thr=0.2168 Acc=0.998 P=0.969 R=0.981 F1=0.975
+    Stage2 ep 10/40 | loss=0.1335 | val AUC=0.9986 | OK thr=0.3822 Acc=0.998 P=0.970 R=0.987 F1=0.978
+    Stage2 ep 11/40 | loss=0.1335 | val AUC=0.9986 | OK thr=0.1531 Acc=0.998 P=0.969 R=0.981 F1=0.975
+    Stage2 ep 12/40 | loss=0.1307 | val AUC=0.9989 | OK thr=0.1403 Acc=0.998 P=0.969 R=0.981 F1=0.975
+    Stage2 ep 13/40 | loss=0.1305 | val AUC=0.9983 | OK thr=0.6393 Acc=0.998 P=0.964 R=0.987 F1=0.975
+    Stage2 ep 14/40 | loss=0.1271 | val AUC=0.9985 | OK thr=0.5901 Acc=0.998 P=0.970 R=0.987 F1=0.978
+    Stage2 ep 15/40 | loss=0.1277 | val AUC=0.9985 | OK thr=0.1105 Acc=0.998 P=0.980 R=0.975 F1=0.977
+    Stage2 ep 16/40 | loss=0.1305 | val AUC=0.9986 | OK thr=0.1155 Acc=0.998 P=0.980 R=0.975 F1=0.977
+    Stage2 ep 17/40 | loss=0.1343 | val AUC=0.9980 | OK thr=0.2966 Acc=0.998 P=0.975 R=0.981 F1=0.978
+    Stage2 ep 18/40 | loss=0.1323 | val AUC=0.9983 | OK thr=0.2641 Acc=0.998 P=0.969 R=0.981 F1=0.975
+    Stage2 ep 19/40 | loss=0.1273 | val AUC=0.9983 | OK thr=0.2141 Acc=0.998 P=0.975 R=0.981 F1=0.978
+    Stage2 ep 20/40 | loss=0.1281 | val AUC=0.9982 | OK thr=0.1854 Acc=0.998 P=0.975 R=0.981 F1=0.978
+    early stop (no val improvement for 10 epochs)
+  Fold 1 TEST (threshold 0.3822 fixed from its validation fold, val-feasible=True)
+  threshold=0.3822 | n_real=100 n_fake=4214 | AUC=0.9990 AP(fake)=1.0000 AP(real)=0.9449
+  [       natural] Acc=0.9958 BalAcc=0.9783 | Macro P=0.9359 R=0.9783 F1=0.9561 | Real P/R=0.873/0.960 Fake P/R=0.999/0.997
+  [class_balanced] Acc=0.9783 BalAcc=0.9783 | Macro P=0.9790 R=0.9783 F1=0.9783 | Real P/R=0.997/0.960 Fake P/R=0.961/0.997
+  confusion (natural): TN(real ok)=96 FP(real->fake)=4 FN(fake->real)=14 TP(fake ok)=4200
+==============================================================================
+Threshold selected on out-of-fold VALIDATION predictions (3448 videos): 0.3822 | feasible(all>= 0.80)=True | val Acc=0.9980 P=0.9696 R=0.9868 F1=0.9780
+OOF VALIDATION (dev set)
+  threshold=0.3822 | n_real=80 n_fake=3368 | AUC=0.9986 AP(fake)=1.0000 AP(real)=0.9220
+  [       natural] Acc=0.9980 BalAcc=0.9868 | Macro P=0.9696 R=0.9868 F1=0.9780 | Real P/R=0.940/0.975 Fake P/R=0.999/0.999
+  [class_balanced] Acc=0.9868 BalAcc=0.9868 | Macro P=0.9870 R=0.9868 F1=0.9868 | Real P/R=0.998/0.975 Fake P/R=0.976/0.999
+  confusion (natural): TN(real ok)=78 FP(real->fake)=2 FN(fake->real)=5 TP(fake ok)=3363
+*** HELD-OUT TEST (single model, fold 1; each fold's threshold fixed from its validation split; evaluated once) ***
+  threshold=0.5000 | n_real=100 n_fake=4214 | AUC=0.9990 AP(fake)=1.0000 AP(real)=0.9449
+  [       natural] Acc=0.9958 BalAcc=0.9783 | Macro P=0.9359 R=0.9783 F1=0.9561 | Real P/R=0.873/0.960 Fake P/R=0.999/0.997
+  [class_balanced] Acc=0.9783 BalAcc=0.9783 | Macro P=0.9790 R=0.9783 F1=0.9783 | Real P/R=0.997/0.960 Fake P/R=0.961/0.997
+  confusion (natural): TN(real ok)=96 FP(real->fake)=4 FN(fake->real)=14 TP(fake ok)=4200
+Per-fold TEST (each with its own validation threshold), mean +- std:
+          accuracy: 0.9958 +- 0.0000
+   macro_precision: 0.9359 +- 0.0000
+      macro_recall: 0.9783 +- 0.0000
+          macro_f1: 0.9561 +- 0.0000
+               auc: 0.9990 +- 0.0000
+  test RealVideo-RealAudio    n=  100 correctly classified=0.9600
+  test RealVideo-FakeAudio    n=  100 correctly classified=1.0000
+  test FakeVideo-RealAudio    n= 1951 correctly classified=0.9928
+  test FakeVideo-FakeAudio    n= 2163 correctly classified=1.0000
+Saved: results_ft/results.json, test_predictions.csv, avff_v3_fold*.pth

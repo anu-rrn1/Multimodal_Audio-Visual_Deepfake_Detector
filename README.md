@@ -122,8 +122,7 @@ fixed by `--seed 42` and recorded in `results_ft/test_split.json`.
 ## References
 
 - Oorloff, J., Yacoob, Y., Shrivastava, A. *Avoid-Reconstruct-Fuse (AVFF): Self-Supervised
-  Audio-Visual Representation Learning for Deepfake Detection.* CVPR 2024. (Verify the exact
-  title and authors before publishing.)
+  Audio-Visual Representation Learning for Deepfake Detection.* CVPR 2024. 
 - Khalid, H., Tariq, S., Kim, M., Woo, S. S. *FakeAVCeleb: A Novel Audio-Video Multimodal
-  Deepfake Dataset.* NeurIPS Datasets and Benchmarks 2021. (Verify before publishing.)
+  Deepfake Dataset.* NeurIPS Datasets and Benchmarks 2021. 
 - He, K., Zhang, X., Ren, S., Sun, J. *Deep Residual Learning for Image Recognition.* CVPR 2016.

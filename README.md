@@ -1,4 +1,4 @@
-# AVFF-v3: Multimodal Audio-Visual Deepfake Detection on FakeAVCeleb
+# Multimodal Audio-Visual Deepfake Detection
 
 An AVFF-based audio-visual deepfake detector evaluated on the full **FakeAVCeleb v1.2** dataset
 (21,544 videos, 500 identities). The model learns audio-visual correspondence from real videos
